@@ -5,7 +5,7 @@ import java.awt.HeadlessException;
 import java.time.Instant;
 import javax.swing.JOptionPane;
 
-public class bancoContrasenaFor {
+public class Ejercicio1 {
     public static void main(String[] args) {
         
         String separator = ("-".repeat(85)), bankName = ("BBVA" + " Banca en linea");

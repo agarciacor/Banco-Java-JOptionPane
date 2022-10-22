@@ -11,7 +11,7 @@ public class Ejercicio1 {
         String separator = ("-".repeat(85)), bankName = ("BBVA" + " Banca en linea");
         String goodbye = (bankName + "  |  \"Creando oportunidades\"\n" + separator +"\nGracias por su preferencia. Vuelve pronto.\n¡Estamos para servirte!");
         int inputPassword, password = 1235, loopPassword = 3, loopHome = 1, loopHomeCase2 = 3, homeSelection, questionForQuit;
-        float balance = 1200000.0f, withdraw;
+        float balance = 1000.0f, withdraw;
         String history = "FECHA Y HORA                      MONTO\n";
         Instant instant = Instant.now();
 
@@ -41,7 +41,7 @@ public class Ejercicio1 {
                                         history += fecha.substring(0, 19) + "         - $" + withdraw + "0 MXN\n";
                                         JOptionPane.showMessageDialog(null, "Operacion exitosa...\nEl retiro es de: $" + withdraw + "0 MXN\n"+ separator +"\nPor favor toma tu dinero de la bandeja", "RETIROS", JOptionPane.INFORMATION_MESSAGE); 
                                     } else{
-                                        JOptionPane.showMessageDialog(null, "Lo sentimos el monto de retiro es invalido!\n"+ separator +"\nSolo puedes retirar desde\n$20.00 MXN a $50,000.00 MXN\n" + separator + "\n Tu tienes: " + (3 - k) + "/3 intentos restantes", "DATA ERROR", JOptionPane.ERROR_MESSAGE);
+                                        JOptionPane.showMessageDialog(null, "Lo sentimos el monto de retiro es invalido!\n"+ separator +"\nSolo puedes retirar desde\n$20.00 MXN a $50,000.00 MXN\n" + separator +"\nTu balance total es de:  $" + balance + "0 MXN" + "\n Tu tienes: " + (3 - k) + "/3 intentos restantes", "DATA ERROR", JOptionPane.ERROR_MESSAGE);
                                         if (k == loopHomeCase2) {
                                             JOptionPane.showMessageDialog(null, "Lo sentimos, ya no tienes mas intentos disponibles", "CASH OUT - ERROR", JOptionPane.ERROR_MESSAGE);
                                         }
